@@ -1,0 +1,151 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Georgia, serif;
+  background: #fdfdfd;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navigation Bar */
+nav {
+  background: #2c3e50;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  
+}
+
+nav ul li a:hover, nav ul li a.active {
+  color: #3498db;
+}
+
+/* Header */
+header {
+  background: #3498db;
+  color: #fff;
+  text-align: left;
+  padding: 40px 0;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Profile Picture */
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin-bottom: 20px;
+}
+
+/* Sections */
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+.container1{
+    width: 80%;
+  margin: auto;
+
+}
+
+section {
+  margin: 40px 0;
+}
+
+section h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+ul {
+  list-style: square;
+  margin-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+/* Contact Links */
+#contact a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+#bio {
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+
+#intro{
+  font-size: small;
+}
+
+.grid-container {
+  display: grid;
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  /* Defines two columns: one automatically sized for the image, the other taking the rest of the space */
+  grid-template-columns: auto 1fr;
+  gap: 20px; /* Adds space between the image and text */
+  align-items: center; /* Vertically centers the content in the grid cells */
+}
+
+.grid-container img {
+  max-width: 150px; /* Adjust image size as needed */
+  height: auto;
+}
+
+
+.hero{display:flex;gap:20px;align-items:center;background:var(--card);padding:20px;border-radius:10px;box-shadow:0 6px 18px rgba(20,20,40,0.06)}
+.avatar{width:120px;height:120px;border-radius:12px;object-fit:cover;border:1px solid #eee}
+.hero-text h1{margin:0 0 6px 0;font-size:28px}
+.role{color:var(--accent);margin:0 0 10px 0;font-weight:600}
