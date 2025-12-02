@@ -5,46 +5,73 @@
   box-sizing: border-box;
 }
 
+/* Theme variables */
+:root {
+  --bg: #fdfdfd;
+  --text: #333333;
+  --primary: #3437db;
+  --nav-bg: #2c3e50;
+  --footer-bg: #2c3e50;
+  --accent: #3498db;
+  --card: #ffffff;
+  --header-bg: var(--primary);
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --bg: #0f1720;
+  --text: #e6eef6;
+  --primary: #3437db;
+  --nav-bg: #0b1220;
+  --footer-bg: #0b1220;
+  --accent: #7cc0ff;
+  --card: #0b1320;
+  --header-bg: #292d30;
+}
+
+html {
+  transition: background-color 220ms ease, color 220ms ease;
+}
+
 /* Body */
 body {
   font-family: Georgia, serif;
-  background: #fdfdfd;
-  color: #333;
+  background: var(--bg);
+  color: var(--text);
   line-height: 1.6;
 }
 
-/* Navigation Bar */
-nav {
-  background: #2c3e50;
+/* Legacy navigation styles (scoped) */
+nav.legacy {
+  background: var(--nav-bg);
   padding: 5px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-nav ul {
+nav.legacy ul {
   display: flex;
   justify-content: center;
   list-style: none;
 }
 
-nav ul li {
+nav.legacy ul li {
   margin: 0 10px;
 }
 
-nav ul li a {
+nav.legacy ul li a {
   color: #fff;
   text-decoration: none;
-  
 }
 
-nav ul li a:hover, nav ul li a.active {
+nav.legacy ul li a:hover, nav.legacy ul li a.active {
   color: #3498db;
 }
 
 /* Header */
 header {
-  background: #3498db;
+  background: var(--header-bg);
   color: #fff;
   text-align: left;
   padding: 40px 0;
@@ -69,13 +96,13 @@ header p {
 }
 
 /* Sections */
-.container {
+.site-container {
   width: 80%;
   margin: auto;
   padding: 20px;
 }
 
-.container1{
+.site-container1{
     width: 80%;
   margin: auto;
 
@@ -87,10 +114,11 @@ section {
 
 section h2 {
   margin-bottom: 20px;
-  color: #2c3e50;
-  border-bottom: 2px solid #3498db;
+  color: var(--nav-bg);
+  border-bottom: 2px solid var(--primary);
   display: inline-block;
   padding-bottom: 5px;
+  color: var(--text);
 }
 
 ul {
@@ -104,7 +132,7 @@ ul li {
 
 /* Contact Links */
 #contact a {
-  color: #3498db;
+  color: var(--primary);
   text-decoration: none;
 }
 
@@ -114,7 +142,7 @@ ul li {
 
 /* Footer */
 footer {
-  background: #2c3e50;
+  background: var(--footer-bg);
   color: #fff;
   text-align: center;
   padding: 20px 0;
@@ -133,14 +161,13 @@ footer {
   width: 80%;
   margin: auto;
   padding: 20px;
-  /* Defines two columns: one automatically sized for the image, the other taking the rest of the space */
   grid-template-columns: auto 1fr;
-  gap: 20px; /* Adds space between the image and text */
-  align-items: center; /* Vertically centers the content in the grid cells */
+  gap: 20px;
+  align-items: center;
 }
 
 .grid-container img {
-  max-width: 150px; /* Adjust image size as needed */
+  max-width: 150px;
   height: auto;
 }
 
